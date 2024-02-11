@@ -83,6 +83,34 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "Spawner",
+            "id": "ead47c8e-4909-4125-a70e-4bc103772394",
+            "actions": [
+                {
+                    "name": "spawn",
+                    "type": "Button",
+                    "id": "608fe29d-f931-46b6-9e5f-0a88af83f5b3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "33738dfa-33cd-46e4-8ce4-eb190de7d479",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "spawn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
