@@ -7,7 +7,8 @@ public class Enemy : MonoBehaviour
     public float speed;
     public Rigidbody2D target;
 
-    bool isLive;
+    bool isLive = true;
+
     Rigidbody2D rigid;
     SpriteRenderer spriter;
 
@@ -17,10 +18,20 @@ public class Enemy : MonoBehaviour
         spriter = GetComponent<SpriteRenderer>();
     }
 
-    
+
     void FixedUpdate()
     {
-        Vector2 dirVec = target.position - rigid.position;
+        if (!isLive)
+            return;
 
+        Vector2 dirVec = target.position - rigid.position;
+        Vector2 nextVec = dirVec.normalized * speed * Time.fixedDeltaTime;
+        rigid.MovePosition(rigid.position + nextVec);
+        rigid.velocity = Vector2.zero;
+    }
+
+    private void LateUpdate()
+    {
+        spriter.flipX = target.position.x < rigid.position.x;
     }
 }
