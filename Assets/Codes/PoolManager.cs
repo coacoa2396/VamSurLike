@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class PoolManager : MonoBehaviour
 {
-    public GameObject[] prefabs; // 인스펙터에서 초기화
-    List<GameObject>[] pools;
+    public GameObject[] prefabs;    // 프리팹을 보관할 변수                        // 인스펙터에서 초기화
+    List<GameObject>[] pools;       // 각 프리팹을 넣어서 관리할 리스트의 배열
 
     void Awake()
     {
